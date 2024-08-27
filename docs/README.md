@@ -1,6 +1,8 @@
 
 ## Ratelimiter in Asp.Net Core
 
+[msdn](https://learn.microsoft.com/en-us/aspnet/core/performance/rate-limit?view=aspnetcore-8.0)
+
 1. Ratelimiting Middleware was introdcued in `.Net 7`.
 
 2. Add the Rate Limiter Services and define the Policy
@@ -18,7 +20,7 @@
 The AddFixedWindowLimiter method uses a fixed time window to limit requests. 
 When the time window expires, a new time window starts and the request limit is reset.
 
-```chsarp
+```csharp
 
 builder.Services.AddRateLimiter(options => 
 {
